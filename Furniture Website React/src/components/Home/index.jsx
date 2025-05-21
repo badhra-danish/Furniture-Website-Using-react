@@ -5,7 +5,7 @@ import InspirationSection from "./inspiration";
 import BrowseRangeSecton from "./browserangesection";
 import HowItsWorkSection from "./howitswork";
 import EmailListSection from "./emailistsection";
-
+import UserFeedBackSection from "./UserFeedbackSection";
 const Home = () => {
     return(
         <>
@@ -15,6 +15,7 @@ const Home = () => {
           <InspirationSection/>
           <BrowseRangeSecton/>
           <HowItsWorkSection/>
+          <UserFeedBackSection/>
           <EmailListSection/>
         </>
     )

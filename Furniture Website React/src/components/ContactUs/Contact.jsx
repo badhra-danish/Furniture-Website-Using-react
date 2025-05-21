@@ -1,5 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+import {  faEnvelope,faLocationDot,faPhone} from '@fortawesome/free-solid-svg-icons'
 
 
 const ContactUs = () => {
@@ -12,14 +15,16 @@ const ContactUs = () => {
       <div className="contact-content">
         {/* Address Section */}
         <div className="contact-info">
-            
+        
           <h2>Our Address</h2>
-          <p>FurniHome Furniture Co.</p>
+           
+          <p><FontAwesomeIcon icon={faLocationDot}/> : FurniHome Furniture Co.</p>
           <p>123 Comfort Street</p>
           <p>Woodland City, WL 45678</p>
           
-          <p>Email: info@furnihome.com</p>
-          <p>Phone: +1 (555) 123-4567</p>
+          <p><FontAwesomeIcon icon={faEnvelope}/> : info@furnihome.com</p>
+           
+          <p><FontAwesomeIcon icon={faPhone}/> : +1 (555) 123-4567</p>
         </div>
 
         {/* Contact Form */}

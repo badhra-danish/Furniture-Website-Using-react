@@ -2,6 +2,8 @@ import React from "react";
 import Freedeleiveryship from '@mui/icons-material/Home';
 import Supporticon from '@mui/icons-material/Cached';
 import Authenticicon from '@mui/icons-material/Shield'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 const AuthenticSction = () => {
     return(
         <>
@@ -9,7 +11,7 @@ const AuthenticSction = () => {
         <div class="authentic-icon">
             <div class="icon-card">
                 <div class="icon">
-                    <Freedeleiveryship/>
+                    <FontAwesomeIcon icon={faTruckFast}/>
                 </div>
                 <div class="icon-name">
                     <p class="name">Free Delivery</p>
@@ -19,7 +21,7 @@ const AuthenticSction = () => {
 
             <div class="icon-card">
                 <div class="icon">
-                   <Supporticon/>
+                   <Supporticon className="i"/>
                 </div>
                 <div class="icon-name">
                     <p class="name">Support 24/7</p>
@@ -29,7 +31,7 @@ const AuthenticSction = () => {
 
             <div class="icon-card">
                 <div class="icon">
-                 <Authenticicon/>
+                 <Authenticicon className="i"/>
                 </div>
                 <div class="icon-name">
                     <p class="name">100% Authentic</p>

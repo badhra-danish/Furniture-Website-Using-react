@@ -20,7 +20,7 @@ const ContactUs = () => {
            
           <p><FontAwesomeIcon icon={faLocationDot}/> : FurniHome Furniture Co.</p>
           <p>123 Comfort Street</p>
-          <p>Woodland City, WL 45678</p>
+          <p>Woodland City, WL 45678.</p>
           
           <p><FontAwesomeIcon icon={faEnvelope}/> : info@furnihome.com</p>
            

@@ -15,7 +15,7 @@ const AuthenticSction = () => {
                 </div>
                 <div class="icon-name">
                     <p class="name">Free Delivery</p>
-                    <p class="msg">Fast And Free Shipping</p>
+                    <p class="msg">Fast And Free Shipping.</p>
                 </div>
             </div>
 
@@ -25,7 +25,7 @@ const AuthenticSction = () => {
                 </div>
                 <div class="icon-name">
                     <p class="name">Support 24/7</p>
-                    <p class="msg">24/7 Support All Time</p>
+                    <p class="msg">24/7 Support All Time.</p>
                 </div>
             </div>
 

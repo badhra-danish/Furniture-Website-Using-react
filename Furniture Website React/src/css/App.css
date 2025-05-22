@@ -240,6 +240,7 @@ button{
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1.5rem;
+    
 
 }
 .authentic-icon .icon-card{
@@ -249,6 +250,7 @@ button{
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    border-bottom: 0.5px solid var(--primary-color);
 }
 .icon-card .icon{
     font-size:2rem;

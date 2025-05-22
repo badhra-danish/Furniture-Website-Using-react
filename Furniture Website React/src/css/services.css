@@ -1,0 +1,36 @@
+
+:root{
+    --primary-color: #054C73;
+    --bgcolor-light:#DFE9F4;
+    --bg-color-section:#F2F5FF;
+    --white-info:#fff;
+    --lorem-content:#606060;
+}
+  .services-section {
+    padding: 2em;
+    text-align: center;
+  }
+  
+  .service-card {
+    background:var(--bgcolor-light);
+    margin: 1em auto;
+    padding: 1em;
+    max-width: 600px;
+   
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+  
+  .service-card h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+  }
+  .service-card p{
+    color: var(--lorem-content);
+    margin-top: 1rem;
+  } 
+  .service-card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 2px 8px var(--primary-color);
+  }
+  

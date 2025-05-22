@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBars,faXmark } from "@fortawesome/free-solid-svg-icons";
+import { motion, AnimatePresence } from 'framer-motion';
 
 
 
@@ -25,7 +26,7 @@ const Header = () => {
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/services  ">Service</Link></li>
                     <li><Link to="/gallery">Gallery</Link></li>
-                    <li><Link to="/contact">Conact</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                 </nav>
             </div>
             <div className="bars">
@@ -37,17 +38,25 @@ const Header = () => {
         </div>
        </div>
     </div>
+    <AnimatePresence>
     {isOpen && (
-        <div className="listitem">
+        <motion.div
+         className='listitem'
+         initial={{ opacity: 0, y: -400 }}
+         animate={{ opacity: 1, y: 0 }}
+         exit={{ opacity: 0, y: -400 }}
+         transition={{ duration: 0.4 }}
+         >
             <div className="navlistitem">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/services  ">Service</Link></li>
-                    <li><Link to="/gallery">Gallery</Link></li>
-                    <li><Link to="/contact">Conact</Link></li>
+                    <li><Link to="/" onClick={() => setIsopen(false)}>Home</Link></li>
+                    <li><Link to="/about" onClick={() => setIsopen(false)}>About</Link></li>
+                    <li><Link to="/services" onClick={() => setIsopen(false)}>Service</Link></li>
+                    <li><Link to="/gallery" onClick={() => setIsopen(false)}>Gallery</Link></li>
+                    <li><Link to="/contact" onClick={() => setIsopen(false)}>Contact</Link></li>
             </div>   
-        </div>
+        </motion.div>
     )}
+    </AnimatePresence>
         </>
     )
 }

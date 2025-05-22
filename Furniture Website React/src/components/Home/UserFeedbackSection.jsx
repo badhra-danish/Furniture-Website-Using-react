@@ -2,7 +2,9 @@ import React from "react";
 import UserFeedBackCard from "../userFeedback/UserFeed";
 import feedbackimg from "../../images/Purchase Securely.png"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination ,Autoplay, EffectFade} from 'swiper/modules'
+import 'swiper/css';
+import 'swiper/css/effect-fade'; // for fade effect;
 const UserFeedBackSection = () => {
     return(
         <>
@@ -15,10 +17,15 @@ const UserFeedBackSection = () => {
                 </div>
                 <div className="user">
                 <Swiper
-                  modules={[Navigation]}
+                  modules={[Autoplay,EffectFade,Pagination]}
+                  autoplay ={{delay:3000,disableOnInteraction: false}}
+                  loop={true}
                   pagination={{ clickable: true }}
                   spaceBetween={40}
-                  slidesPerView={1}>
+                  slidesPerView={1}
+                 effect="slide"
+                  speed={2000}
+                  >
                  <SwiperSlide>
       <UserFeedBackCard
                 name= "John Deo"

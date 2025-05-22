@@ -18,13 +18,16 @@ body{
 }
 .header-container{
     width: 100%;
-    z-index: 1;
+    position: sticky;
+    top: 0;
+    z-index: 999;
    border-bottom: 1px solid var(--primary-color);
     backdrop-filter:blur(10px);
 }
 .header{
     height: 70px;
     padding: 0 5rem; 
+    z-index: 1;
 }
 .navbar{
     height: 70px;
@@ -74,35 +77,36 @@ body{
 button{
     background: transparent;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--primary-color);
 }
 .listitem{
-    position: absolute;
+    position:fixed;
+    z-index: 999;
+    /*position: absolute;*/
     width: 100%;
     display: flex;
     justify-content: center;
     text-align: center;
-    transition: 0.5s ease;
+    transition: all 1s ease;
     background: var(--bgcolor-light);
 }
 .navlistitem{
     width: 100%;
      background-color: var(--bg-color-section);
-     top: 10;
-     left: 0;
-    z-index: 1;
    padding: 1rem;
    list-style: none;
 }
 .navlistitem li{
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0.8rem;
+    border-bottom: 0.5px solid var(--primary-color);
 }
 .navlistitem li a{
     position: relative;
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 1.2rem;
     text-decoration: none;
 }
 .navlistitem li a::after{
@@ -143,10 +147,12 @@ button{
     width: 100%;
 }
 .hero-img img{
+    height: 100vh;
     width: 100%;
-    background-size: cover;
+    object-fit: cover;
 }
 .hero-card-main{
+    z-index: 1;
     position: absolute;
     width: 35%;
     background:var(--bgcolor-light);
@@ -183,7 +189,45 @@ button{
     font-weight: 600;
     border-radius: 40px;
 }
+@media (max-width:728px){
+    .hero-card-main{
 
+        width: 60%;
+    }
+    .hero-img img{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        background-size: cover;
+    }
+    .hero-card{
+        margin: 0;
+        padding: 1rem;
+    }
+    .hero-card h6{
+        font-size: 0.6rem;
+        margin-bottom: 0.3rem;
+        letter-spacing: 2px;
+    }
+    .hero-card .title{
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+    }
+    .hero-card .card-content{
+        font-size: 0.4rem;
+        margin-bottom: 0.2rem;
+    }
+    .hero-card .card-btn{
+        background-color: var(--primary-color);
+        width: 40%;
+        padding: 0.4rem 0;
+        font-size: 0.4rem;
+        color:var(--white-info);
+        border: none;
+        font-weight: 600;
+    }
+}
 /****Authentic icon Display ****/
 
 .authentic-icon-main{
@@ -206,7 +250,7 @@ button{
     align-items: center;
     gap: 1.5rem;
 }
-.icon-card .icon .i{
+.icon-card .icon{
     font-size:2rem;
     color: var(--primary-color);
 }
@@ -279,8 +323,10 @@ button{
     text-align: center;
 }
 .card-section .card p{
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     margin-top: 0.5rem;
+    color: var(--lorem-content);
+    font-weight: 600;
 }
 .card-section .card img{
     width: 100%;
@@ -293,7 +339,8 @@ button{
         font-size: 1.7rem;
     }
     .section-heading p{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        letter-spacing: 0;
     }
     .card-section .card{
         flex: 1 1 100%;
@@ -380,6 +427,29 @@ button{
 .user{
     width: 50%; 
 }
+
+.swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    background-color: gray;
+    opacity: 0.2;
+    margin: 0 6px;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s; color: var(--primary-color);
+}
+.swiper-pagination-bullet-active {
+    background-color:var(--primary-color);
+    transform: scale(1.2);
+    opacity: 1;
+}
+.swiper-button-next::after{
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+.swiper-button-prev::after{
+    font-size: 1rem;
+    color: var(--primary-color);
+}
 @media (max-width:728px){
     .user{
         flex: 1 1 100%;
@@ -417,6 +487,7 @@ button{
 .email-input button{
     width: 20%;
     padding:0.5rem;
+    font-size: 1rem;
     background-color: var(--primary-color);
     color: var(--white-info);
     border: 2px solid var(--primary-color);
@@ -500,7 +571,7 @@ footer{
     justify-content: space-between;
 }
 .footer-right-part .footer-list{
-
+    text-decoration: none   ;
     color: var(--white-info);
     font-size: 0.9rem
 }
@@ -511,6 +582,11 @@ footer{
 .footer-list li{
     list-style: none;
     margin-top: 0.5rem;
+}
+.footer-list li a{
+    text-decoration: none;
+    color: var(--white-info);
+    cursor: pointer;
 }
 .copyright{
     width: 100%;

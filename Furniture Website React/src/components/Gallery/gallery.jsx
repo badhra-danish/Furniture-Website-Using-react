@@ -2,16 +2,18 @@ import React from "react";
 import dinningimg from "../../images/dinning.png";
 import livingImg from "../../images/livingroom.png";
 import bedroomImg from "../../images/bedroom.png";
-import PurchaseSecureImg from "../../images/Purchase Securely.png";
-import StyleRoomImg from "../../images/Style Your Room.png";
-import ShipFromWareImg from "../../images/Ships From Warehouse.png";
+import abt1 from '../../images/about1.jpg'
+import abt2 from '../../images/about2.jpg'
+import abt3 from '../../images/about3.jpg'
+import abt4 from '../../images/about4.png'
 const images = [
    dinningimg,
    livingImg,
    bedroomImg,
-   PurchaseSecureImg,
-   StyleRoomImg,
-   ShipFromWareImg
+   abt1,
+   abt2,
+   abt3,
+   abt4
 ]
 
 const Gallery = () =>{

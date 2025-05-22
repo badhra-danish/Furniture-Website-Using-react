@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faInstagram} from '@fortawesome/free-brands-svg-icons'
 import {faFacebook} from '@fortawesome/free-brands-svg-icons'
@@ -33,10 +34,11 @@ const Footer = () => {
                 <div class="footer-list">
                     <h2>Company</h2>
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Gallery</li>
-                        <li>Product</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/services  ">Service</Link></li>
+                    <li><Link to="/gallery">Gallery</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>
 

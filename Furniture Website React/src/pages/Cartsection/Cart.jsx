@@ -3,6 +3,19 @@ import { useCart } from '../../context/CartContext'
 
 function Cart() {
    const Cart = useCart()
+   
+   const Increment = (cartindex) => {
+      Cart.setItem((prev) => prev.map((item,index) => index == cartindex ? {...item , quantity:item.quantity+1}:item))
+   }
+
+   const Decrement = (cartindex) => {
+      Cart.setItem((prev) => prev.map((item,index) => index == cartindex ? {...item , quantity:item.quantity-1}:item).filter((item) => item.quantity > 0))
+   }
+
+   const Remove = (cartindex) => {
+      Cart.setItem((prev) => prev.filter((_,index) => index != cartindex))
+   }
+   const TotalAmt = Cart.item.reduce((a,b) => a + b.price*(b.quantity || 1)  ,0)
   return (
      <>
         <div className='Cart-section'>
@@ -13,6 +26,7 @@ function Cart() {
                 <p>Img</p>
                 <p>name</p>
                 <p>price</p>
+                <p>sub Price</p>
                 <div className='quantity'>
                    <p>Quantity</p>
                 </div>
@@ -24,13 +38,14 @@ function Cart() {
                 <img src={prev.img}/>
                 <p>{prev.name}</p>
                 <p>{prev.price}</p>
+                <p>{prev.price * prev.quantity}</p>
                 <div className='quantity'>
-                   <button>-</button>
-                   <p>{45}</p>
-                   <button>+</button>
+                   <button onClick={() => Decrement(index)}>-</button>
+                   <p>{prev.quantity}</p>
+                   <button onClick={() => Increment(index)}>+</button>
                 </div>
                 <div className='remove'>
-                <button>✖</button>
+                <button onClick={() => Remove(index)}>✖</button>
                 </div>
               </div>
               )} 
@@ -43,11 +58,11 @@ function Cart() {
                    <div className='checkout-info'>
                      <div className='info-detail'>
                         <p>Items</p>
-                        <p>10</p>
+                        <p>{Cart.item.length}</p>
                      </div>
                      <div className='info-detail'>
                         <p>Sub Total</p>
-                        <p>10</p>
+                        <p>$ {TotalAmt}.00</p>
                      </div>
                      <div className='info-detail'>
                         <p>Shipping</p>
@@ -55,14 +70,14 @@ function Cart() {
                      </div>
                      <div className='info-detail'>
                         <p>Taxes</p>
-                        <p>10</p>
+                        <p>$ 00.00</p>
                      </div>
                    </div>
 
                   <div className='total'>
                     <div className='info-detail'>
                         <p>Total</p>
-                        <p>10</p>
+                        <p>$ {TotalAmt}.00</p>
                      </div>
                      <button>Proceed to Checkout</button>
                   </div>

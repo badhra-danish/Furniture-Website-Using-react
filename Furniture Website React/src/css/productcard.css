@@ -104,6 +104,7 @@
     width: 40%;
     background-color: var(--bgcolor-light);
     border-radius: 10px;
+    height: fit-content ;
 }
 .bill-checkout .checkout{
     padding: 1rem;

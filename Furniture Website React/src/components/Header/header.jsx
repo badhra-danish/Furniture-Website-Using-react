@@ -7,11 +7,13 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBars,faXmark,faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { motion, AnimatePresence } from 'framer-motion';
 
-
+import { useCart } from "../../context/CartContext";
 
 
 const Header = () => {
     const [isOpen,setIsopen] =useState(false)
+
+    const cart = useCart()
     return(
         <>
             <div class="header-container">
@@ -32,7 +34,8 @@ const Header = () => {
             </div>
             <div className="cart">
               <Link to="/cart"><li><FontAwesomeIcon icon={faCartShopping}/></li></Link>
-              <span>2</span>
+             
+              {cart.item.length > 0 &&  <span>{cart.item.length}</span>}
             </div>
             <div className="bars">
               <button onClick={() => setIsopen(!isOpen)}>

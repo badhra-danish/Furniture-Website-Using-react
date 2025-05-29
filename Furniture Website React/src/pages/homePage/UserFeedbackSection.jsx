@@ -1,5 +1,5 @@
 import React from "react";
-import UserFeedBackCard from "../userFeedback/UserFeed";
+import UserFeedBackCard from "../../components/userFeedback/UserFeed";
 import feedbackimg from "../../images/Purchase Securely.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";

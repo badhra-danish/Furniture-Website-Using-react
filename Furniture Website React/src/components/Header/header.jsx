@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faBars,faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faBars,faXmark,faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { motion, AnimatePresence } from 'framer-motion';
 
 
@@ -24,15 +24,20 @@ const Header = () => {
                 <nav>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/about">About</Link></li>
-                    <li><Link to="/services  ">Service</Link></li>
+                    <li><Link to="/product">Product</Link></li>
+                    <li><Link to="/services ">Service</Link></li>
                     <li><Link to="/gallery">Gallery</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
                 </nav>
             </div>
+            <div className="cart">
+              <Link to="/cart"><li><FontAwesomeIcon icon={faCartShopping}/></li></Link>
+              <span>2</span>
+            </div>
             <div className="bars">
-            <button onClick={() => setIsopen(!isOpen)}>
-             {isOpen?(<FontAwesomeIcon icon={faXmark}/>):(<FontAwesomeIcon icon={faBars}/>)}
-            </button>
+              <button onClick={() => setIsopen(!isOpen)}>
+                {isOpen?(<FontAwesomeIcon icon={faXmark}/>):(<FontAwesomeIcon icon={faBars}/>)}
+              </button>
             </div>
             
         </div>
@@ -51,6 +56,7 @@ const Header = () => {
                     <li><Link to="/" onClick={() => setIsopen(false)}>Home</Link></li>
                     <li><Link to="/about" onClick={() => setIsopen(false)}>About</Link></li>
                     <li><Link to="/services" onClick={() => setIsopen(false)}>Service</Link></li>
+                    <li><Link to="/product" onClick={() => setIsopen(false)}>Product</Link></li>
                     <li><Link to="/gallery" onClick={() => setIsopen(false)}>Gallery</Link></li>
                     <li><Link to="/contact" onClick={() => setIsopen(false)}>Contact</Link></li>
             </div>   

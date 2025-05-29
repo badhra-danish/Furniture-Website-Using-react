@@ -74,6 +74,29 @@ body{
 .bars{
     display: none;
 }
+.cart{
+    position: relative  ;
+}
+.cart li{
+    font-size: 1.5rem;
+    list-style: none;
+    color: var(--primary-color);
+}
+.cart span{
+    color: black;
+    font-weight: 600;
+    font-size: 0.6rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    right: 0;
+    top: 0;
+    background: red;
+    width: 15px;
+    border-radius: 50%;
+    height: 15px;
+}
 button{
     background: transparent;
     border: none;

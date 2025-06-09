@@ -1,6 +1,12 @@
 import React from 'react';
 import Productcard from '../../components/Productcard';
 import ProductImg from '../../images/dinning.png'
+import TableImg from '../../images/table.jpg'
+import Chair from  '../../images/chair.jpg'
+import Bed from '../../images/bed.jpg'
+import HandleImg from '../../images/handle.jpg'
+import sofaImg from '../../images/about2.jpg';
+import PlyWoodimg from '../../images/plywood.jpg'
 function Product() {
   return (
    <>
@@ -13,41 +19,41 @@ function Product() {
             
             <div className='product-card-section'>
                <Productcard 
-                 img={ProductImg}
+                 img={TableImg}
                  name={'Table'}
                  price={12200}
                  description={'jxncznxjjx hbchzbx'}
                  />
 
 <Productcard 
-                 img={ProductImg}
+                 img={Chair}
                  name={'Chair'}
                  price={3000}
                  description={'jxncznxjjx hbchzbx'}
                  />
 
 <Productcard 
-                 img={ProductImg}
+                 img={Bed}
                  name={'Bed'}
                  price={10200}
                  description={'jxncznxjjx hbchzbx'}
                  />
 
 <Productcard 
-                 img={ProductImg}
+                 img={HandleImg}
                  name={'Handle'}
                  price={800}
                  description={'jxncznxjjx hbchzbx'}
                  />
 
 <Productcard 
-                 img={ProductImg}
+                 img={PlyWoodimg}
                  name={'PlyWood'}
                  price={2500}
                  description={'jxncznxjjx hbchzbx'}
                  />
                  <Productcard 
-                 img={ProductImg}
+                 img={sofaImg}
                  name={'Sofa'}
                  price={5000}
                  description={'jxncznxjjx hbchzbx'}

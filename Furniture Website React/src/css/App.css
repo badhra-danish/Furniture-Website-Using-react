@@ -85,10 +85,11 @@ body{
 .cart span{
     color: black;
     font-weight: 600;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     position: absolute;
     display: flex;
     align-items: center;
+    color: var(--white-info);
     justify-content: center ;
     right: 0;
     top: 0;

@@ -2,7 +2,7 @@ import React from 'react'
 import { useCart } from '../../context/CartContext'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-
+import AuthenticSction from '../homePage/authentic';
 function Cart() {
    const Cart = useCart();
    
@@ -61,7 +61,7 @@ function Cart() {
                         </tbody>
                      </table>
                   ) : (
-                     <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', gap: '1rem', height: '50vh', fontSize: '1.2rem' }}>
+                     <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column', justifyContent: 'center', gap: '1rem', height: '50vh', fontSize: '1.2rem', color:'#054C73' }}>
                         <FontAwesomeIcon icon={faShoppingCart} />
                         <p>Cart is Empty</p>
                      </div>
@@ -100,6 +100,11 @@ function Cart() {
                   </div>
                </div>
             </div>
+
+            <div style={{marginTop:'1rem'}}>
+               <AuthenticSction/>
+            </div>
+            
          </div>
       </>
    );
